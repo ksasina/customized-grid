@@ -1,0 +1,10 @@
+.ag-name-value{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+
+    & > span {
+        margin-right: 8px;
+    }
+}
