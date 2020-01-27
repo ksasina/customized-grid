@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from './../../../environments/environment';
-import { ISearchListResponse, IViewItem } from './models';
+import { ISearchListResponse } from './ISearchListResponse.model';
+import { IViewItem } from './IViewItem.model';
 
 @Injectable({
   providedIn: 'root'

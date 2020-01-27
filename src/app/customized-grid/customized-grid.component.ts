@@ -3,13 +3,13 @@ import { AgGridAngular } from 'ag-grid-angular';
 
 import { GetContextMenuItemsParams, GridOptions } from 'ag-grid-community';
 import { CheckboxComponent } from './cell-controls/checkbox/checkbox.component';
+import { IViewItem } from './shared/IViewItem.model';
 import { descriptionColumn } from './shared/column-defs/description-column';
 import { publishedAtColumn } from './shared/column-defs/published-at-column';
 import { selectionColumn } from './shared/column-defs/selection-column';
 import { thumbnailColumn } from './shared/column-defs/thumbnail-column';
 import { titleColumn } from './shared/column-defs/title-column';
 import { CustomizedGridService } from './shared/customized-grid.service';
-import { IViewItem } from './shared/models';
 import { ChangeDetectionComponent } from './status-bar/change-detection/change-detection.component';
 import { CounterComponent } from './status-bar/counter/counter.component';
 import { SelectedCounterComponent } from './status-bar/selected-counter/selected-counter.component';

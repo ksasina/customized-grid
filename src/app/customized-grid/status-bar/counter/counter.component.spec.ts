@@ -1,25 +1,33 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
-// import { RecordsCountComponent } from './counter.component';
+import { CounterComponent } from './counter.component';
 
-// describe('RecordsCountComponent', () => {
-//   let component: RecordsCountComponent;
-//   let fixture: ComponentFixture<RecordsCountComponent>;
+describe('CounterComponent', () => {
+    let component: CounterComponent;
+    let fixture: ComponentFixture<CounterComponent>;
 
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [RecordsCountComponent]
-//     })
-//       .compileComponents();
-//   }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [CounterComponent]
+        }).compileComponents();
+    }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(RecordsCountComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(CounterComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+    it('should set component', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it('should set count', () => {
+        component.count = 10;
+        fixture.detectChanges();
+
+        const counter = fixture.debugElement.queryAll(By.css('.ag-name-value-value'))[0].nativeElement.textContent;
+        expect(counter).toBe('10');
+    });
+});

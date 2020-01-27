@@ -9,7 +9,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      schemas: [ NO_ERRORS_SCHEMA ]
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -17,5 +17,11 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
+  });
+
+  it('should call CustomizedGridComponent', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.nativeElement.querySelector('app-customized-grid') as HTMLElement;
+    expect(app.tagName.toLowerCase()).toBe('app-customized-grid');
   });
 });
